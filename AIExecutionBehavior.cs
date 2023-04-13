@@ -41,7 +41,7 @@ namespace SensicalExecutionPenalties {
                 return false;
 
             if (prisoner.IsEnemy(captor)) {
-                int traitModifier = (captor.GetTraitLevel(DefaultTraits.Honor) * GlobalSettings<MCMConfig>.Instance.HonorModifier) + (captor.GetTraitLevel(DefaultTraits.Mercy) * GlobalSettings<MCMConfig>.Instance.MercyModifier);
+                int traitModifier = (captorHonorLevel * GlobalSettings<MCMConfig>.Instance.HonorModifier) + (captorMercyLevel * GlobalSettings<MCMConfig>.Instance.MercyModifier);
                 int relation = captor.GetBaseHeroRelation(prisoner);
 
                 int chanceOfExecuting = (int)Math.Round((double)Math.Abs(relation) / 2) - traitModifier;

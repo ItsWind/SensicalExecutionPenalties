@@ -51,8 +51,7 @@ namespace SensicalExecutionPenalties {
                         loss = 0;
                     result -= loss;
                 }
-
-                if (hero.MapFaction != null && victim.MapFaction != null && hero.MapFaction.IsAtWarWith(victim.MapFaction)) {
+                else if (hero.MapFaction.IsAtWarWith(victim.MapFaction)) {
                     int gain = GlobalSettings<MCMConfig>.Instance.EnemyFactionRelationGain;
                     gain -= Math.Abs(traitModifier);
                     if (IsHeroRuler[victim])
