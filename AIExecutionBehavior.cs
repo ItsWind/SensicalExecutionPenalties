@@ -25,7 +25,7 @@ namespace SensicalExecutionPenalties {
                     return;
 
                 Hero captor = party.LeaderHero;
-                if (captor == Hero.MainHero)
+                if (captor == null || captor == Hero.MainHero || !captor.IsAlive)
                     return;
 
                 if (WouldHeroExecute(captor, hero))
