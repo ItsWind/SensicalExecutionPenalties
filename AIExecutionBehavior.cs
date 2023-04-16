@@ -16,12 +16,12 @@ namespace SensicalExecutionPenalties {
         }
 
         private void TryExecutionForHero(Hero hero) {
-            if (!GlobalSettings<MCMConfig>.Instance.AIExecution)
+            if (!GlobalSettings<MCMConfig>.Instance.AIExecution || hero == null)
                 return;
 
             if (hero.IsPrisoner) {
                 PartyBase party = hero.PartyBelongedToAsPrisoner;
-                if (!party.IsMobile)
+                if (party == null || !party.IsMobile)
                     return;
 
                 Hero captor = party.LeaderHero;
