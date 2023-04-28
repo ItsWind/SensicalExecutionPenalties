@@ -32,9 +32,7 @@ namespace SensicalExecutionPenalties {
                 }
 
                 // in the family
-                if (hero.Spouse == victim)
-                    result -= GlobalSettings<MCMConfig>.Instance.SpouseRelationLoss;
-                else if (hero.Father == victim || victim.Father == hero || hero.Mother == victim || victim.Mother == hero)
+                if (hero.Father == victim || victim.Father == hero || hero.Mother == victim || victim.Mother == hero)
                     result -= GlobalSettings<MCMConfig>.Instance.ParentChildRelationLoss;
                 else if (hero.Siblings.Contains(victim) || victim.Siblings.Contains(hero))
                     result -= GlobalSettings<MCMConfig>.Instance.SiblingRelationLoss;

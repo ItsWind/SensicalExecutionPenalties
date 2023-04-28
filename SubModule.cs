@@ -10,6 +10,7 @@ namespace SensicalExecutionPenalties {
         public static Random Random = new();
 
         public static bool HideRelationNotifications = false;
+        public static bool RelationChangeInProgress = false;
 
         protected override void OnSubModuleLoad() {
             new Harmony("SensicalExecutionPenalties").PatchAll();

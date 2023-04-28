@@ -5,7 +5,7 @@ using TaleWorlds.CampaignSystem.SceneInformationPopupTypes;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
 
-namespace SensicalExecutionPenalties {
+namespace SensicalExecutionPenalties.Patches {
     [HarmonyPatch(typeof(HeroExecutionSceneNotificationData), "GetExecuteTroopHintText")]
     internal class ExecutionHintTextPatch {
         [HarmonyPrefix]

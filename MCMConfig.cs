@@ -13,7 +13,11 @@ namespace SensicalExecutionPenalties {
 		[SettingPropertyGroup("General")]
 		public bool EnableRelationChanges { get; set; } = false;
 
-		[SettingPropertyBool("Enable AI Execution", Order = 2, HintText = "Enables AI heroes to execute other AI heroes (or you probably).", RequireRestart = false)]
+		[SettingPropertyBool("Enable Charm XP Gain On Relation Changes", Order = 2, HintText = "Enables charm XP gain for a positive relation change upon executing another.", RequireRestart = false)]
+		[SettingPropertyGroup("General")]
+		public bool EnableCharmXPGain { get; set; } = false;
+
+		[SettingPropertyBool("Enable AI Execution", Order = 3, HintText = "Enables AI heroes to execute other AI heroes (or you probably).", RequireRestart = false)]
 		[SettingPropertyGroup("General")]
 		public bool AIExecution { get; set; } = true;
 
@@ -45,9 +49,9 @@ namespace SensicalExecutionPenalties {
 
 		// FAMILIAL
 
-		[SettingPropertyInteger("Spouse", 0, 100, Order = 1, HintText = "Relation LOSS if executed spouse.", RequireRestart = false)]
+		/*[SettingPropertyInteger("Spouse", 0, 100, Order = 1, HintText = "Relation LOSS if executed spouse.", RequireRestart = false)]
 		[SettingPropertyGroup("Familial Relation Change")]
-		public int SpouseRelationLoss { get; set; } = 100;
+		public int SpouseRelationLoss { get; set; } = 100;*/
 
 		[SettingPropertyInteger("Parent/Child", 0, 100, Order = 2, HintText = "Relation LOSS if executed parent/child.", RequireRestart = false)]
 		[SettingPropertyGroup("Familial Relation Change")]
